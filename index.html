@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Call Dashboard</h1>
+    </header>
+
+    <main>
+        <section class="filters">
+            <label for="start-date">Inicio:</label>
+            <input type="date" id="start-date">
+            
+            <label for="end-date">Fin:</label>
+            <input type="date" id="end-date">
+            
+            <button onclick="filterCalls()">Filtrar Llamadas</button>
+        </section>
+
+        <section class="summary">
+            <h3>Total Recibido:</h3>
+            <p id="total-usd">$0.00 USD</p>
+        </section>
+
+        <section class="call-status">
+            <h3>Call Status</h3>
+            <button onclick="startCalls()">Start Calls</button>
+            <button onclick="stopCalls()">Stop Calls</button>
+            <button onclick="editActiveCall()">Edit Active Call</button>
+        </section>
+
+        <section class="call-list">
+            <h2>Llamadas Recibidas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Duración</th>
+                        <th>Costo (USD)</th>
+                    </tr>
+                </thead>
+                <tbody id="call-table-body">
+                    <!-- Llamadas generadas dinámicamente -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
